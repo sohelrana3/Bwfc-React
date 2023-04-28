@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import {BsPlayFill} from 'react-icons/bs'
 import Container from './layouts/Container'
 const Banner = () => {
 
@@ -27,10 +28,17 @@ const Banner = () => {
               <div className='flex'>
                   <div className='w-1/2'>
                     <h1 className='font-man font-extrabold text-6xl text-black mb-5'>{bannerData.bannerheading}</h1>
-                    <p className='font-man font-normal text-xl text-primary w-[466px] mb-6'>{bannerData.bannerparagraph}</p>
-                    <div className='flex'>
-                        <a href='#' className='font-man font-bold text-base text-white bg-primary py-4 px-10 rounded-full'>{bannerData.bannerButton.text}</a>
-                        <a href='#'></a>
+                    <p className='font-man font-normal text-xl text-[#64607D] w-[466px] mb-6'>{bannerData.bannerparagraph}</p>
+                    <div className='flex gap-x-16'>
+                        <div className='flex'>
+                            <a href='#' className='font-man font-bold text-base text-white bg-primary py-4 px-10 rounded-full'>{bannerData.bannerButton.text}</a>
+                        </div>
+                        <div className='flex items-center gap-x-1'>
+                            <div className='bg-[#22D497] p-4 rounded-full'>
+                            <BsPlayFill className=' text-white text-lg' /> 
+                            </div>
+                            <a href='#' className='font-man font-bold text-base text-primary'>{bannerData.video.text}</a>
+                        </div>
                     </div>
                   </div>
                   <div className='w-1/2'></div>
