@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className='w-[56%]'>
                 <ul className='flex justify-center gap-x-10 font-man font-normal text-sm '>
                     {navbarData.navItems.map(nitem=>(
-                        <li className='group relative transition ease-in-out delay-150 hover:text-primary'>{nitem.item}
+                        <li className='group relative transition ease-in-out delay-150 hover:text-primary cursor-pointer'>{nitem.item}
                            { nitem.dropDown && 
                                 <>
                                     <FaAngleDown className='absolute top-1 -right-3.5'/>

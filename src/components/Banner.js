@@ -22,11 +22,18 @@ const Banner = () => {
     }
 
   return (
-      <section className='h-[500px] bg-no-repeat bg-center' style={{ backgroundImage: `url(${bannerData.bannerbgshape})`    }}>
+      <section className='h-[500px] w-full bg-no-repeat bg-center' style={{ backgroundImage: `url(${bannerData.bannerbgshape})`    }}>
         <Container>
               <div className='flex'>
-                  <div className='w-1/2 bg-red-500 h-96'></div>
-                  <div className='w-1/2 bg-green-500 h-96'></div>
+                  <div className='w-1/2'>
+                    <h1 className='font-man font-extrabold text-6xl text-black mb-5'>{bannerData.bannerheading}</h1>
+                    <p className='font-man font-normal text-xl text-primary w-[466px] mb-6'>{bannerData.bannerparagraph}</p>
+                    <div className='flex'>
+                        <a href='#' className='font-man font-bold text-base text-white bg-primary py-4 px-10 rounded-full'>{bannerData.bannerButton.text}</a>
+                        <a href='#'></a>
+                    </div>
+                  </div>
+                  <div className='w-1/2'></div>
               </div>
         </Container>
          
