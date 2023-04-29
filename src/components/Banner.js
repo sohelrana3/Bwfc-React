@@ -26,7 +26,7 @@ const Banner = () => {
       <section className='h-[500px] w-full bg-no-repeat bg-center' style={{ backgroundImage: `url(${bannerData.bannerbgshape})`    }}>
         <Container>
               <div className='flex'>
-                  <div className='w-1/2'>
+                  <div className='w-1/2 mt-16'>
                     <h1 className='font-man font-extrabold text-6xl text-black mb-5'>{bannerData.bannerheading}</h1>
                     <p className='font-man font-normal text-xl text-[#64607D] w-[466px] mb-6'>{bannerData.bannerparagraph}</p>
                     <div className='flex gap-x-16'>
@@ -41,7 +41,9 @@ const Banner = () => {
                         </div>
                     </div>
                   </div>
-                  <div className='w-1/2'></div>
+                  <div className='w-1/2'>
+                    <img src={bannerData.bannerrightimg} />
+                  </div>
               </div>
         </Container>
          
