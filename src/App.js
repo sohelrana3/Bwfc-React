@@ -1,17 +1,24 @@
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
-import Sponsor from "./components/Sponsor";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+  createRoutesFromElements,
+} from "react-router-dom";
+import RootLayouts from "./components/layouts/RootLayouts";
+import Home from "./Pages/Home";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayouts />}> 
+      <Route index element={<Home/>}></Route>
+    </Route>
+  )
+);
 
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Banner />
-      <Sponsor />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
