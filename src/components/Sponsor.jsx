@@ -23,7 +23,7 @@ const Sponsor = () => {
   return (
     <Container>
         <div className='flex justify-center items-center'>
-         <h2 className=''>{sponsorData.title}</h2>  
+         <h2 className='mb-10'>{sponsorData.title}</h2>  
         </div>
         <div className='flex justify-between'>
             {sponsorData.logos.map(item=>(
