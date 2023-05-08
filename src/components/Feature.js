@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Container from './layouts/Container'
 import axios from 'axios'
 import Button from './layouts/Button'
+import Haddingtop from './layouts/Haddingtop'
+import Haddinglow from './layouts/Haddinglow'
+import Para from './layouts/Para'
 
 const Feature = () => {
     let [feature, setFeature] = useState({})
@@ -26,11 +29,10 @@ const Feature = () => {
                     <img className='-ml-24' src={feature.featureImage} alt='feature' />
                 </div>
                 <div className='w-1/2'>
-                    <h3 className='font-man text-lg font-extrabold mb-6 text-primary capitalize'>{feature.subTitle}</h3>
-                    <h2 className='font-man text-[50px] font-bold text-black mb-8'>{feature.title}</h2>
-                    <p className='font-man text-lg font-normal mb-7 text-[#757095] w-[512px]'>{feature.paragraph}</p>
+                    <Haddinglow title={feature.subTitle}/>
+                    <Haddingtop title={feature.title} />
+                    <Para title={feature.paragraph}/>
                     <Button title={feature.button.text} />
-                    {/* <button>{feature.button.text}</button> */}
                 </div>
             </div>
         </Container>
