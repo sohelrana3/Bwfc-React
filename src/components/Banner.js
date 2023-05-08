@@ -23,7 +23,7 @@ const Banner = () => {
     }
 
   return (
-      <section className='h-[500px] w-full bg-no-repeat bg-center' style={{ backgroundImage: `url(${bannerData.bannerbgshape})`    }}>
+      <section className='' style={{ backgroundImage: `url(${bannerData.bannerbgshape})`    }}>
         <Container>
               <div className='flex'>
                   <div className='w-1/2 mt-16'>
