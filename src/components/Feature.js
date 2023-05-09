@@ -22,7 +22,7 @@ const Feature = () => {
         return
     }
   return (
-    <section className='p-24' style={{backgroundImage: `url(${feature.featureShape})`}}>
+    <section className='pt-28' style={{backgroundImage: `url(${feature.featureShape})`}}>
         <Container>
             <div className='flex'>
                 <div className='w-1/2'>
