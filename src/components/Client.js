@@ -4,6 +4,7 @@ import axios from 'axios'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import {AiFillStar} from 'react-icons/ai'
 
 
 const Client = () => {
@@ -45,7 +46,16 @@ const Client = () => {
                   <div>
                     <span className='text-red-600 text-xl'>{item.symbol}</span>
                     <h2 className='font-man font-extrabold text-xl w-[290px] mb-4'>{item.heading}</h2>
-                    <p className='font-man font-normal text-base text-[#757095]'>{item.paragraph}</p>
+                    <p className='font-man font-normal text-base text-[#757095] mb-4'>{item.paragraph}</p>
+                  <div className='flex'>
+                    <AiFillStar className='text-[#F9896B]'/>
+                    <AiFillStar className='text-[#F9896B]'/>
+                    <AiFillStar className='text-[#F9896B]'/>
+                    <AiFillStar className='text-[#F9896B]'/>
+                    <AiFillStar className='text-[#F9896B]'/>
+                    
+                  </div>
+
                   </div>
                 </div>
               </div>
