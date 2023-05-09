@@ -14,7 +14,7 @@ const Client = () => {
             let clientdata = await axios.get("https://bwfc-api.vercel.app/client")
             setclient(clientdata.data)
             setloadding(false)
-            console.log(client.subTitle);
+            console.log(client.sliderItem);
         }
         Clients()
     },[])
@@ -36,27 +36,21 @@ const Client = () => {
             <h2 className='font-man font-extrabold text-[40px] w-[350px]'>{client.title}</h2>
         </div>
         <div>
-        <h2> Single Item</h2>
         <Slider {...settings}>
-          <div>
-            <div>1</div>
-            <div>2</div>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
+          {
+            client.sliderItem.map((item)=>(
+              <div>
+                <div className='flex gap-10'>
+                  <img src={item.image}/>
+                  <div>
+                    <span className='text-red-600 text-xl'>{item.symbol}</span>
+                    <h2 className='font-man font-extrabold text-xl w-[290px] mb-4'>{item.heading}</h2>
+                    <p className='font-man font-normal text-base text-[#757095]'>{item.paragraph}</p>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
         </Slider>
         </div>
         <div>2</div>
