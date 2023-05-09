@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Container from './layouts/Container'
 import axios from 'axios'
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
 
 const Client = () => {
     let [client, setclient] = useState()
@@ -38,7 +39,8 @@ const Client = () => {
         <h2> Single Item</h2>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <div>1</div>
+            <div>2</div>
           </div>
           <div>
             <h3>2</h3>
