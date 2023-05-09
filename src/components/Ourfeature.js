@@ -25,7 +25,7 @@ const Ourfeature = () => {
   }
   return (
     <Container>
-        <div className='flex py-20 bg-[#F3F7FA]'>
+        <div className='flex py-20 bg-[#F3F7FA] rounded-xl'>
             <div className='ml-16 w-[60%]'>
                 <Haddinglow title={payment.subTitle}/>
                 <Haddingtop title={payment.title}/>

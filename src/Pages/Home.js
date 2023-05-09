@@ -3,6 +3,7 @@ import Banner from '../components/Banner'
 import Sponsor from '../components/Sponsor'
 import Feature from '../components/Feature'
 import Ourfeature from '../components/Ourfeature'
+import Account from '../components/Account'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Sponsor />
         <Feature />
         <Ourfeature />
+        <Account />
     </>
   )
 }
