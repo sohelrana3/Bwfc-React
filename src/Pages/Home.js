@@ -4,6 +4,7 @@ import Sponsor from '../components/Sponsor'
 import Feature from '../components/Feature'
 import Ourfeature from '../components/Ourfeature'
 import Account from '../components/Account'
+import Client from '../components/Client'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Feature />
         <Ourfeature />
         <Account />
+        <Client />
     </>
   )
 }
