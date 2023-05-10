@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import {AiFillStar} from 'react-icons/ai'
+import {FaAngleLeft,FaAngleRight} from 'react-icons/fa'
 
 
 const Client = () => {
@@ -22,12 +23,17 @@ const Client = () => {
     if(lodding){
         return
     }
+    let SamplePrevArrow = ()=>{
+      console.log("clll");
+    }
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        // nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
       };
   return (
     <Container>
@@ -57,6 +63,10 @@ const Client = () => {
                     <h2 className='font-man font-black text-base'>{item.name}</h2>
                     <span className='font-man font-normal text-sm'>{item.designation}</span>
                   </div>
+                </div>
+                <div className='flex gap-x-6 mt-9 ml-9 '>
+                  <FaAngleLeft onClick={SamplePrevArrow} className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/>
+                  <FaAngleRight className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/>
                 </div>
               </div>
             ))
