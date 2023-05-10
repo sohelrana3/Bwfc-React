@@ -23,7 +23,7 @@ const Client = () => {
         return
     }
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -47,15 +47,15 @@ const Client = () => {
                     <span className='text-red-600 text-xl'>{item.symbol}</span>
                     <h2 className='font-man font-extrabold text-xl w-[290px] mb-4'>{item.heading}</h2>
                     <p className='font-man font-normal text-base text-[#757095] mb-4'>{item.paragraph}</p>
-                  <div className='flex'>
-                    <AiFillStar className='text-[#F9896B]'/>
-                    <AiFillStar className='text-[#F9896B]'/>
-                    <AiFillStar className='text-[#F9896B]'/>
-                    <AiFillStar className='text-[#F9896B]'/>
-                    <AiFillStar className='text-[#F9896B]'/>
-                    
-                  </div>
-
+                    <div className='flex'>
+                      <AiFillStar className='text-[#F9896B]'/>
+                      <AiFillStar className='text-[#F9896B]'/>
+                      <AiFillStar className='text-[#F9896B]'/>
+                      <AiFillStar className='text-[#F9896B]'/>
+                      <AiFillStar className='text-[#F9896B]'/>
+                    </div>
+                    <h2 className='font-man font-black text-base'>{item.name}</h2>
+                    <span className='font-man font-normal text-sm'>{item.designation}</span>
                   </div>
                 </div>
               </div>
@@ -63,7 +63,10 @@ const Client = () => {
           }
         </Slider>
         </div>
-        <div>2</div>
+        <div className='mt-16 flex justify-between pt-10 pr-9 pb-8 pl-8 border border-solid border-[#DEE1E6] rounded-xl'>
+          <p className='font-man font-normal text-xl text-[#757095] w-[770px]'>And residence for met the estimable disposing. Mean if he they been no hold mr. Is at much do made took held help.</p>
+          <a className='py-4 px-16 bg-[#FF7F5C] rounded-full text-white font-man font-bold text-base cursor-pointer'>Get Started</a>
+        </div>
     </Container>
   )
 }
