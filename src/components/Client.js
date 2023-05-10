@@ -6,9 +6,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {AiFillStar} from 'react-icons/ai'
 import {FaAngleLeft,FaAngleRight} from 'react-icons/fa'
+import { useRef } from 'react';
 
 
 const Client = () => {
+  const coustom = useRef()
     let [client, setclient] = useState()
     let [lodding , setloadding] = useState(true)
     useEffect(()=>{
@@ -23,18 +25,19 @@ const Client = () => {
     if(lodding){
         return
     }
-    let SamplePrevArrow = ()=>{
-      console.log("clll");
+    let next = ()=>{
+      coustom.current.slickNext()
+    }
+    let prev = ()=>{
+      coustom.current.slickPrev()
     }
     const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-      };
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
   return (
     <Container>
         <div className='mb-10'>
@@ -43,7 +46,7 @@ const Client = () => {
             <h2 className='font-man font-extrabold text-[40px] w-[350px]'>{client.title}</h2>
         </div>
         <div>
-        <Slider {...settings}>
+        <Slider {...settings} ref={coustom}>
           {
             client.sliderItem.map((item)=>(
               <div>
@@ -64,14 +67,15 @@ const Client = () => {
                     <span className='font-man font-normal text-sm'>{item.designation}</span>
                   </div>
                 </div>
-                <div className='flex gap-x-6 mt-9 ml-9 '>
-                  <FaAngleLeft onClick={SamplePrevArrow} className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/>
-                  <FaAngleRight className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/>
-                </div>
+                
               </div>
             ))
           }
         </Slider>
+        </div>
+        <div className='flex gap-x-6 mt-9 ml-9 '>
+           <FaAngleLeft onClick={prev} className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/>
+          <FaAngleRight onClick={next} className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/> 
         </div>
         <div className='mt-16 flex justify-between pt-10 pr-9 pb-8 pl-8 border border-solid border-[#DEE1E6] rounded-xl'>
           <p className='font-man font-normal text-xl text-[#757095] w-[770px]'>And residence for met the estimable disposing. Mean if he they been no hold mr. Is at much do made took held help.</p>
