@@ -77,7 +77,7 @@ const Client = () => {
            <FaAngleLeft onClick={prev} className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/>
           <FaAngleRight onClick={next} className='text-2xl hover:text-white hover:bg-primary hover:rounded-full'/> 
         </div>
-        <div className='mt-16 flex justify-between pt-10 pr-9 pb-8 pl-8 border border-solid border-[#DEE1E6] rounded-xl'>
+        <div className='mt-16 flex justify-between pt-10 pr-9 pb-8 pl-8 border border-solid border-[#DEE1E6] rounded-xl shadow-xl'>
           <p className='font-man font-normal text-xl text-[#757095] w-[770px]'>And residence for met the estimable disposing. Mean if he they been no hold mr. Is at much do made took held help.</p>
           <a className='py-4 px-16 bg-[#FF7F5C] rounded-full text-white font-man font-bold text-base cursor-pointer'>Get Started</a>
         </div>
