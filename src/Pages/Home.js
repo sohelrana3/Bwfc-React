@@ -7,6 +7,7 @@ import Account from '../components/Account'
 import Client from '../components/Client'
 import Residence from '../components/Residence'
 import Choose from '../components/Choose'
+import Contract from '../components/Contract'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <Client />
         <Residence />
         <Choose/>
+        <Contract />
     </>
   )
 }
