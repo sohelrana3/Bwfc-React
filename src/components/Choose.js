@@ -20,27 +20,30 @@ const Choose = () => {
         return
     }
   return (
-    <section className='bg-[#F3F7FA] py-12'>
         <Container>
-            <div className='w-1/2 m-auto text-center mb-[70px]'>
-                    <Haddinglow title={Choose.subTitle}/>
-                    <Haddingtop title={Choose.title}/>
-            </div>
-            <div className='flex flex-wrap gap-4'>
-                    {Choose.items.map(item=>(
-                        <>
-                            {item.visibility && (
-                                <div className='w-[48%] bg-white relative pl-32 pt-14 pr-12 pb-9'> 
-                                <div className='w-14 h-14 absolute top-[60px] left-[30px] rounded-full' style={{backgroundColor: item.circleColor}}></div>
-                                <h2 className='font-man font-extrabold text-2xl mb-5'>{item.title}</h2>
-                                <p className='font-man font-normal text-lg text-[#757095] w-[320px]'>{item.details}</p>
-                                </div> 
-                            )}
-                        </>
-                    ))}
+            <div className='bg-[#F3F7FA] py-[56px] px-[81px] relative'>
+                <div className='absolute -top-9 left-[75px]'>
+                   <img src='./images/Choose.png' alt='logo'/>
+                </div>
+                <div className='w-1/2 m-auto text-center mb-[70px]'>
+                        <Haddinglow title={Choose.subTitle}/>
+                        <Haddingtop title={Choose.title}/>
+                </div>
+                <div className='flex flex-wrap gap-4'>
+                        {Choose.items.map(item=>(
+                            <>
+                                {item.visibility && (
+                                    <div className='w-[48%] bg-white relative pl-32 pt-14 pr-12 pb-9'> 
+                                    <div className='w-14 h-14 absolute top-[60px] left-[30px] rounded-full' style={{backgroundColor: item.circleColor}}></div>
+                                    <h2 className='font-man font-extrabold text-2xl mb-5'>{item.title}</h2>
+                                    <p className='font-man font-normal text-lg text-[#757095] w-[320px]'>{item.details}</p>
+                                    </div> 
+                                )}
+                            </>
+                        ))}
+                </div>
             </div>
         </Container>
-    </section>
   )
 }
 
