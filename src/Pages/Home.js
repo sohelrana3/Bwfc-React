@@ -6,6 +6,7 @@ import Ourfeature from '../components/Ourfeature'
 import Account from '../components/Account'
 import Client from '../components/Client'
 import Residence from '../components/Residence'
+import Choose from '../components/Choose'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Account />
         <Client />
         <Residence />
+        <Choose/>
     </>
   )
 }
